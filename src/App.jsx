@@ -13,11 +13,11 @@ class App extends Component {
         q: term
       }
     });
-    this.setState({ videos: response.data.items, videoSelected: response.data.items[0] });
+    this.setState({ videos: response.data.items, videoSelected: response.data.items[ 0 ] });
   };
 
   onVideoSelect = (video) => {
-    this.setState({videoSelected: video});
+    this.setState({ videoSelected: video });
   };
   
   componentDidMount(){
@@ -34,10 +34,10 @@ class App extends Component {
         <div className='ui grid'>
           <div className='ui row'>
             <div className='video-detail eleven wide column'>
-              < VideoDetail video={this.state.videoSelected}/>
+              < VideoDetail video={ this.state.videoSelected }/>
             </div>
             <div className='video-list five wide column'>
-              < VideoList onVideoSelect={this.onVideoSelect} videos={ this.state.videos }/>
+              < VideoList onVideoSelect={ this.onVideoSelect } videos={ this.state.videos }/>
             </div>
           </div>
         </div>

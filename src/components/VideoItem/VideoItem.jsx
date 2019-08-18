@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 
 const VideoItem = ({ video, onVideoSelect }) => {
   return(
-    <div onClick={ () => onVideoSelect(video)} className='video-item item'>
-      <img alt={video.snippet.title} className='ui image' src={ video.snippet.thumbnails.medium.url } />
+    <div onClick={ () => onVideoSelect(video) } className='video-item item'>
+      <img alt={ video.snippet.title } className='ui image' src={ video.snippet.thumbnails.medium.url } />
       <div className='content'>
         <div className='header'>
           {video.snippet.title}
@@ -16,7 +16,8 @@ const VideoItem = ({ video, onVideoSelect }) => {
 };
 
 VideoItem.propTypes = {
-  video: PropTypes.array
+  video: PropTypes.array,
+  onVideoSelect: () => {},
 };
 
 VideoItem.defaultProps = {

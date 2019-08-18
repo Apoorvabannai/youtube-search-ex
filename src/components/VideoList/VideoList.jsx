@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const VideoList = ({ videos, onVideoSelect }) => {
   const videoItemList = videos.map((video) => {
     return (
-      <VideoItem key={video.id.videoId} onVideoSelect={ onVideoSelect } video={ video }/>
+      <VideoItem key={ video.id.videoId } onVideoSelect={ onVideoSelect } video={ video }/>
     );
   });
   return(
@@ -16,7 +16,8 @@ const VideoList = ({ videos, onVideoSelect }) => {
 };
 
 VideoList.propTypes = {
-  videos: PropTypes.array.isRequired
+  videos: PropTypes.array.isRequired,
+  onVideoSelect: () => {},
 };
 
 VideoList.defaultProps = {
@@ -24,10 +25,3 @@ VideoList.defaultProps = {
 };
 
 export default VideoList;
-
-// items: PropTypes.arrayOf(
-//   PropTypes.shape({
-//     code: PropTypes.string,
-//     id: PropTypes.number,
-//   })
-// ),
