@@ -13,7 +13,8 @@ describe('Testing Video List Component', () => {
   describe('Tests For Video List Component with props passed', () => {
     let wrapper;
     beforeEach( () => {
-      const props = {videos: [
+      const props = {
+        videos: [
         {
           etag: "0UM_wBUsFuT6ekiIlwaHvyqc80M/sBzXHnJ5Z0c6dmmpDWvyI0RnTAo",
           id: {kind: "youtube#video", videoId: "zO1ahn9y7VI"},
@@ -26,7 +27,8 @@ describe('Testing Video List Component', () => {
           },
           publishedAt: "2017-08-31T21:05:10.000Z"
         }
-      ]};
+      ]
+    };
       wrapper = initialSetup(props);
       return wrapper;
     });
